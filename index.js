@@ -100,6 +100,7 @@ function calculate(){
   if(peopleCount.value !== ""){
     if(parseInt(peopleCount.value) < 1 || peopleCount.value.includes(".") == true){
       peopleWarning.style.display = "block"
+      return;
     }else{
       numberOfPeople = peopleCount.value;
     }
@@ -128,6 +129,18 @@ function reset(){
   document.getElementById('bill-amount').value = "";
   document.querySelector('.custom-input').value = "";
   document.getElementById('peopleCount').value = "";
+
+  // -------------------------------tip-----------------------
+  let data = document.querySelectorAll('.tipAmount');
+  for(let i=0 ;i<4 ;i++){
+    data[i].style.backgroundColor = "var(--input-background)";
+    data[i].style.color = "var(--left-color)";
+  }
+
+  // -------------------------custom---------------------
+  document.querySelector('.custom-input').style.display = "none"
+  document.querySelector('.custom-div').style.backgroundColor = "var(--input-background)";
+  document.querySelector('.custom-div').style.color = "var(--left-color)";
 
   let billWarning = document.getElementById('bill-warning');
   let tipWarning = document.getElementById('tip-warning');
