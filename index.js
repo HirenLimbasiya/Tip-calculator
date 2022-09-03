@@ -136,7 +136,9 @@ function reset(){
     data[i].style.backgroundColor = "var(--input-background)";
     data[i].style.color = "var(--left-color)";
   }
-
+  
+  tip = undefined;
+  
   // -------------------------custom---------------------
   document.querySelector('.custom-input').style.display = "none"
   document.querySelector('.custom-div').style.backgroundColor = "var(--input-background)";
